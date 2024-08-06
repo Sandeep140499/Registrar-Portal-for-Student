@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.pagination button {
+  background-color: #6035ae;
+  color: white;
+  border: 1px solid #6035ae;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #45a049 !important;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination button:not(:last-child) {
+  margin-right: 5px;
+}

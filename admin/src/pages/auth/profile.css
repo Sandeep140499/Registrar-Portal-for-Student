@@ -1,0 +1,18 @@
+/* Styles for the eye icon */
+.show-hide {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust this value to position the icon as needed */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Styles for the eye icon when password is visible */
+.show-password {
+  color: #333; /* Color for the visible eye icon */
+}
+
+/* Styles for the eye icon when password is hidden */
+.show-password-off {
+  color: #ccc; /* Color for the hidden eye icon */
+}

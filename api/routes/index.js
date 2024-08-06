@@ -1,0 +1,43 @@
+const express = require("express");
+const router = express.Router();
+
+const authRoutes = require("./authRoutes");
+const userRoutes = require("./userRoutes");
+const emailRoutes = require("./emailRoutes");
+const uploadFilesRoutes = require("./uploadFilesRoutes");
+const userLoginInfoRoutes = require("./userLoginInfoRoutes");
+const registrationRoutes = require("./registrationRoutes");
+const designationRoutes = require("./designationRoute");
+const degreeRoutes = require("./degreeRoutes");
+const gradeRoutes = require("./gradeRoutes");
+const industryRoutes = require("./industryRoutes");
+const departmentRoutes = require("./departmentRoutes");
+const universityRoutes = require("./universityRoutes");
+const collegeRoutes = require("./collegeRoutes");
+const countryRoutes = require("./countryRoutes");
+const typeRoutes = require("./typeRoutes");
+const employeeRoutes = require("./employeeRoutes");
+const stateRoutes = require("./stateRoutes");
+const verifyToken = require("../controllers/services/verifyToken");
+const cityRoutes = require("./cityRoutes");
+
+router.use("/auth", authRoutes);
+router.use("/college", collegeRoutes);
+router.use("/grade", gradeRoutes);
+router.use("/type", typeRoutes);
+router.use("/university", universityRoutes);
+router.use("/degree", degreeRoutes);
+router.use("/designation", designationRoutes);
+router.use("/department", departmentRoutes);
+router.use("/user", userRoutes);
+router.use("/employee", employeeRoutes);
+router.use("/email", emailRoutes);
+router.use("/industry", industryRoutes);
+router.use("/upload-files", uploadFilesRoutes);
+router.use("/user-login-info", verifyToken, userLoginInfoRoutes);
+router.use("/registration", verifyToken, registrationRoutes);
+router.use("/country", countryRoutes);
+router.use("/state", stateRoutes);
+router.use("/city", cityRoutes);
+
+module.exports = router;
